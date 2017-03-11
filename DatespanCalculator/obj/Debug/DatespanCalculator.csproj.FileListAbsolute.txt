@@ -1,0 +1,6 @@
+c:\users\derek\documents\visual studio 2015\Projects\DatespanCalculator\DatespanCalculator\bin\Debug\DatespanCalculator.exe.config
+c:\users\derek\documents\visual studio 2015\Projects\DatespanCalculator\DatespanCalculator\bin\Debug\DatespanCalculator.exe
+c:\users\derek\documents\visual studio 2015\Projects\DatespanCalculator\DatespanCalculator\bin\Debug\DatespanCalculator.pdb
+c:\users\derek\documents\visual studio 2015\Projects\DatespanCalculator\DatespanCalculator\obj\Debug\DatespanCalculator.csprojResolveAssemblyReference.cache
+c:\users\derek\documents\visual studio 2015\Projects\DatespanCalculator\DatespanCalculator\obj\Debug\DatespanCalculator.exe
+c:\users\derek\documents\visual studio 2015\Projects\DatespanCalculator\DatespanCalculator\obj\Debug\DatespanCalculator.pdb

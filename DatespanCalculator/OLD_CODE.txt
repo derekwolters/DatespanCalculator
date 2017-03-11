@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DatespanCalculator
+{
+    class Program
+    {
+        static void Main()
+        {
+
+            //initalize variables
+            char[] delimiterChars = {'/', '-', '.'};
+            int diffMonth = 0;
+            int diffDay = 0;
+            int diffYear = 0;
+            double dyears = 0;
+            double dmonths = 0;
+            double ddays = 0;
+
+            //get user input
+            Console.WriteLine("Enter a start date (MM/DD/YYYY):");
+            String startIn = Console.ReadLine();
+
+            Console.WriteLine("Enter an end date (MM/DD/YYYY):");
+            String endIn = Console.ReadLine();
+
+            //convert to numeric date
+            DateTime startDate = Convert.ToDateTime(startIn);
+            DateTime endDate = Convert.ToDateTime(endIn);
+
+            //calculate months apart
+            diffMonth = Math.Abs(startDate.Month - endDate.Month);
+
+            //calculate days apart
+            diffDay = Math.Abs(startDate.Day - endDate.Day);         
+
+            //calculate years apart
+            diffYear = Math.Abs(startDate.Year - endDate.Year);
+
+            System.TimeSpan diff = endDate.Subtract(startDate);
+
+            dyears = Math.Abs(diff.TotalDays / 365.2425);
+            dmonths = Math.Abs((diff.TotalDays % 365.2425) / 30.4369);
+            ddays = Math.Abs(((diff.TotalDays % 30.4369) / 30.4369) * 30.4369) + 1.25;
+
+            //display result
+            Console.WriteLine("The difference is {0} months, {1} days, " +
+                "{2} years.", diffMonth, diffDay, diffYear);
+
+            Console.WriteLine("Time Difference: Days: " + diff.Days);// + "Months: " + diff.Months + "Years: " + diff.Years);
+
+            Console.WriteLine(dyears);
+            Console.WriteLine(dmonths);
+            //Console.WriteLine("modulo:" + diff.TotalDays % 365.2425);
+            Console.WriteLine(ddays);
+
+            Console.WriteLine("Press enter to close...");
+            Console.ReadLine();
+        }
+    }
+}
